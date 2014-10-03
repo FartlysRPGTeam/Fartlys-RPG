@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Medieval_RPG_Load_Screen
+{
+    public partial class FirstQuest : Form
+    {
+        public FirstQuest()
+        {
+            InitializeComponent();
+            
+
+        }
+
+        private void FirstQuest_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            
+            FirstQuestDialog FirstQuestDialog = new FirstQuestDialog();
+            FirstQuestDialog.ShowDialog();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FirstQuest frmFirstQuest = new FirstQuest();
+            this.Hide();
+            MainMenu MainMenu = new MainMenu();
+            MainMenu.ShowDialog();
+            this.Close();
+        }
+    }
+}
